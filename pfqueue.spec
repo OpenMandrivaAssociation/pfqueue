@@ -5,7 +5,7 @@
 
 %define name pfqueue
 %define version 0.5.2
-%define release %mkrel 1
+%define release %mkrel 2
 Summary:	Queue manager for the Postfix or Exim mail transport agent
 Name:		%{name}
 Version:	%{version}
