@@ -4,8 +4,8 @@
 %{?!_with_unstable: %{error:%(echo -e "\n\n\nYou are building package for a stable release, please see \nhttp://qa.mandrakesoft.com/twiki/bin/view/Main/DistroSpecificReleaseTag\nif you think this is incorrect\n\n\n ")}%(sleep 2)}
 
 %define name pfqueue
-%define version 0.5.2
-%define release %mkrel 2
+%define version 0.5.6
+%define release %mkrel 1
 Summary:	Queue manager for the Postfix or Exim mail transport agent
 Name:		%{name}
 Version:	%{version}
@@ -30,8 +30,7 @@ Currently, pfqueue has backends for Postfix (both 1.x and 2.x) and Exim
 %setup -q
 
 %build
-%define __libtoolize %{nil}
-%configure
+%configure2_5x
 %make
 
 %install
@@ -43,13 +42,13 @@ rm -rf %{buildroot}
 
 %post -p /sbin/ldconfig
 
-%postun
-[ $1 == 0 ] && /sbin/ldconfig
+%postun -p /sbin/ldconfig
 
 %files
 %defattr (-, root, root, 0755)
 %doc AUTHORS ChangeLog COPYING INSTALL NEWS README TODO
-%doc %{_mandir}/man1/pfqueue.1*
+%{_mandir}/man1/pfqueue.1*
+%{_mandir}/man5/pfqueue.conf.5*
 %{_sbindir}/pfqueue
 %{_sbindir}/spfqueue
 %exclude %{_libdir}/libpfq*.a
