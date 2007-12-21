@@ -10,6 +10,7 @@ License:	GPL
 Group:		Monitoring
 Source:		http://prdownloads.sourceforge.net/%{name}/%{name}-%{version}.tar.bz2
 URL:		http://pfqueue.sourceforge.net/
+Buildroot:	%{_tmppath}/%{name}-%{version}-buildroot
 BuildRequires:	ncurses-devel
 
 
