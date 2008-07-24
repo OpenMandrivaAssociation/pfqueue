@@ -1,6 +1,6 @@
 %define name pfqueue
 %define version 0.5.6
-%define release %mkrel 1
+%define release %mkrel 3
 
 Name:		%{name}
 Version:	%{version}
