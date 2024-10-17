@@ -9,7 +9,7 @@ Summary:	Queue manager for the Postfix or Exim mail transport agent
 License:	GPL
 Group:		Monitoring
 Source:		http://prdownloads.sourceforge.net/%{name}/%{name}-%{version}.tar.bz2
-URL:		http://pfqueue.sourceforge.net/
+URL:		https://pfqueue.sourceforge.net/
 Buildroot:	%{_tmppath}/%{name}-%{version}-buildroot
 BuildRequires:	ncurses-devel
 
